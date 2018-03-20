@@ -21,7 +21,7 @@ public class Tablero implements Iniciable {
 
 	@Override
 	public void desordenarTablero() {
-		// TODO Auto-generated method stub.
+		// TODO Auto-generated method stub
 
 	}
 
