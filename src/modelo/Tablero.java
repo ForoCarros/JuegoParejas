@@ -6,9 +6,8 @@ public class Tablero implements Iniciable {
 
 	protected Carta tablero[][];
 
-	public Tablero(Carta[][] tablero) {
+	public Tablero() {
 		super();
-		this.tablero = tablero;
 	}
 
 	public Carta[][] getTablero() {
