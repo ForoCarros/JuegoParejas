@@ -12,7 +12,7 @@ public interface Accionable {
 	public void mostrarCarta(int x, int y);
 
 	/**
-	 * Oculta la carta en la posición..
+	 * Oculta la carta en la posición.
 	 * 
 	 * @param x
 	 *            posición x.
