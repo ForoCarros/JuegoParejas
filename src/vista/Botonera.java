@@ -11,4 +11,8 @@ public class Botonera extends JPanel {
 
 	}
 
+	public void EstablecerImagen(int numero) {
+
+	}
+
 }
