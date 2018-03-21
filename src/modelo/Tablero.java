@@ -5,9 +5,9 @@ import control.Iniciable;
 public class Tablero implements Iniciable {
 	Carta[][] cartas;
 
-	public Tablero(int parejas) {
+	public Tablero(int dimensiones) {
 		super();
-		crearTablero(parejas);
+		crearTablero(dimensiones);
 	}
 
 	@Override
@@ -18,10 +18,10 @@ public class Tablero implements Iniciable {
 	}
 
 	@Override
-	public void crearTablero(int dimension) {
-		assert dimension>1:"Dimensiones inválidas";
+	public void crearTablero(int dimensiones) {
+		assert dimensiones>1:"Dimensiones inválidas";
 		int idCarta=0;
-		cartas=new Carta[dimension][dimension];
+		cartas=new Carta[dimensiones][dimensiones];
 		for (int i = 0; i < cartas.length; i++) {
 			if (i==cartas.length/2) {
 				idCarta=0;
