@@ -2,7 +2,7 @@ package control;
 
 public interface Jugable {
 	/**
-	 * Muestra la carta en la posición.
+	 * Cambia el estado oculta de la carta a false.
 	 * 
 	 * @param x
 	 *            posición x.
@@ -12,7 +12,7 @@ public interface Jugable {
 	public void mostrarCarta(int x, int y);
 
 	/**
-	 * Oculta la carta en la posición.
+	 * Cambia el estado oculta de la carta a true.
 	 * 
 	 * @param x
 	 *            posición x.
@@ -22,7 +22,7 @@ public interface Jugable {
 	public void ocultarCarta(int x, int y);
 
 	/**
-	 * Compara dos cartas.
+	 * Compara los id de dos cartas.
 	 * @param id1
 	 * @param id2
 	 * @return true si son iguales.
@@ -30,7 +30,7 @@ public interface Jugable {
 	public boolean compararCartas(int id1, int id2);
 	
 	/**
-	 * Elimina la id almacenada.
+	 * "Borra" la memoria cambiando su valor a -1.
 	 */
 	public void borrarMemoria();
 }

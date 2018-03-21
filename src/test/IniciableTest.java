@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import control.Iniciable;
 
 class IniciableTest {
+	//Se necesita la clase Carta.
 	Iniciable instancia;
 	Carta tablero[][] = new Carta[2][2];
 	Carta tableroDos[][] = new Carta[2][2];

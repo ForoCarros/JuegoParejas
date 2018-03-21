@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import control.Jugable;
 
 class JugableTest {
+	//Se necesita la clase carta.
 	Jugable instancia;
 	Carta tablero[][] = new Carta[2][2];
 
