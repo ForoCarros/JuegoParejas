@@ -37,7 +37,7 @@ public class UIParejas extends JFrame {
 	}
 
 	/**
-	 * Create the frame..
+	 * Create the frame..-----------------
 	 */
 	public UIParejas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
