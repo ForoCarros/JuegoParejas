@@ -18,7 +18,7 @@ public class Botonera extends JPanel {
 	int lado = 6;
 
 	/**
-	 * Create the panel.
+	 * Create the panel
 	 */
 	public Botonera(int x, int y) {
 		setLayout(null);
