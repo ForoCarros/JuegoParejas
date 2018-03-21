@@ -2,8 +2,8 @@ package modelo;
 
 public class Carta {
 	
-int id;
-boolean velada=false;
+private int id;
+private boolean velada=false;
 
 public Carta(int id) {
 	super();
