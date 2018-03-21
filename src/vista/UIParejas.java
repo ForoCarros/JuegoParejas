@@ -35,7 +35,7 @@ public class UIParejas extends JFrame {
 			}
 		});
 	}
-	//Hola cambiooo
+	//Hola cambiooogdsaddasgsad
 	/**
 	 * Create the frame.
 	 */
