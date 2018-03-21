@@ -1,6 +1,6 @@
 # JuegoParejas
 
-Adrián: UI y Botonera.
-Fernando: Accionable y MAL.
-Camacho: Iniciable.
-Pablo: ParaUIable.
+Adrián: UI y Botonera.<br>
+Fernando: Accionable y MAL.<br>
+Camacho: Iniciable.<br>
+Pablo: ParaUIable.<br>
