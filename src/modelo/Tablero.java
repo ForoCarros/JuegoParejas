@@ -3,7 +3,7 @@ package modelo;
 import control.Iniciable;
 
 public class Tablero implements Iniciable {
-	Carta[][] cartas;
+	private Carta[][] cartas;
 
 	public Tablero(int dimensiones) {
 		super();
