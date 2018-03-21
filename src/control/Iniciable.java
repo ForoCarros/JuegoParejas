@@ -1,5 +1,7 @@
 package control;
 
+import modelo.Carta;
+
 public interface Iniciable {
 	/**
 	 * Desordena el tablero.
@@ -10,5 +12,5 @@ public interface Iniciable {
 	 * Crea el tablero según el número de parejas.
 	 * @param parejas número de parejas.
 	 */
-	public void crearTablero(int parejas);
+	public void crearTablero(int dimensiones);
 }
