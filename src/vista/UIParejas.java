@@ -17,6 +17,11 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 
 public class UIParejas extends JFrame {
+
+	protected int b;
+int asdfg;
+	protected int cosita;
+
 	protected JPanel contentPane;
 	protected Botonera botonera;
 	/**
