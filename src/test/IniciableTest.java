@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import control.Iniciable;
+import modelo.Carta;
 
 class IniciableTest {
 	//Se necesita la clase Carta.
