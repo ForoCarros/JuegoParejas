@@ -48,7 +48,6 @@ public class Botonera extends JPanel {
 
 				this.add(this.botones[i][j]);
 				x += this.ladoBoton;
-
 			}
 			x = 0;
 			y += this.ladoBoton;
