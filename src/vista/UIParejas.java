@@ -39,12 +39,6 @@ public class UIParejas extends JFrame {
 		contentPane.add(botonera, BorderLayout.CENTER);
 		botonera.setBounds(100, 50, 150, 150);
 		botonera.setLayout(new GridLayout(6, 0, 0, 0));
-		
-		
-	}
-	
-	
-	
-	
 
+	}
 }
