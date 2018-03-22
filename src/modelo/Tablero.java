@@ -12,27 +12,27 @@ public class Tablero implements Iniciable {
 
 	@Override
 	public void desordenarTablero(Carta[][] tablero) {
-		assert tablero!=null:"El tablero no existe";
+		assert tablero != null : "El tablero no existe";
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void crearTablero(int dimensiones) {
-		assert dimensiones>1:"Dimensiones inválidas";
-		int idCarta=0;
-		cartas=new Carta[dimensiones][dimensiones];
+		assert dimensiones > 1 : "Dimensiones inválidas";
+		int idCarta = 0;
+		cartas = new Carta[dimensiones][dimensiones];
 		for (int i = 0; i < cartas.length; i++) {
-			if (i==cartas.length/2) {
-				idCarta=0;
+			if (i == cartas.length / 2) {
+				idCarta = 0;
 			}
 			for (int j = 0; j < cartas[i].length; j++) {
-				cartas[i][j]=new Carta(idCarta);
+				cartas[i][j] = new Carta(idCarta);
 				idCarta++;
 			}
-			
+
 		}
-		
+
 	}
 
 }
