@@ -6,5 +6,6 @@ public interface Accionable {
 	 * @param x coordenada x.
 	 * @param y coordenada y.
 	 */
-	public void realizarJugada(int x, int y);
+	public void realizarJugada(String coordenadas);
+
 }
