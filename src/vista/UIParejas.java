@@ -20,22 +20,6 @@ public class UIParejas extends JFrame {
 	protected JPanel contentPane;
 	protected Botonera botonera;
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					UIParejas frame = new UIParejas();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	//Hola cambiooogdsaddasgsad
-	/**
 	 * Create the frame.
 	 */
 	public UIParejas() {
