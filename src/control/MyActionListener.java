@@ -18,7 +18,7 @@ public class MyActionListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JButton boton = (JButton) e.getSource();
-		String coordenadas = boton.getName();
+		String[]coordenadas = boton.getName().split("-");
 		accion.realizarJugada(coordenadas);
 	}
 }
