@@ -9,7 +9,7 @@ class AccionableTest {
 
 	@Test
 	void testRealizarJugada() {
-		
+		// Pablo esto tengo que probarlo???? enserio????
 	}
 
 }
