@@ -19,11 +19,12 @@ import javax.swing.ImageIcon;
 public class UIParejas extends JFrame {
 
 	protected int b;
-int asdfg;
+	int asdfg;
 	protected int cosita;
 
 	protected JPanel contentPane;
 	protected Botonera botonera;
+
 	/**
 	 * Launch the application.
 	 */
@@ -39,7 +40,8 @@ int asdfg;
 			}
 		});
 	}
-	//Hola cambiooogdsaddasgsad
+
+	// Hola cambiooogdsaddasgsad
 	/**
 	 * Create the frame.
 	 */
@@ -55,17 +57,12 @@ int asdfg;
 		lblJuegoParejas.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblJuegoParejas.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblJuegoParejas, BorderLayout.NORTH);
-		
-		botonera = new Botonera(100, 0);	
+
+		botonera = new Botonera(100, 0);
 		contentPane.add(botonera, BorderLayout.CENTER);
 		botonera.setBounds(100, 50, 150, 150);
-		botonera.setLayout(new GridLayout(6, 0, 0, 0));
-		
-		
+		botonera.setLayout(new GridLayout(botonera.lado, botonera.lado, 0, 0));
+
 	}
-	
-	
-	
-	
 
 }

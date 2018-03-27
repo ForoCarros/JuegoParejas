@@ -15,6 +15,7 @@ public class Botonera extends JPanel {
 	int ladoBoton = 50;
 
 	// esta es la variable para cambiar el lado
+	//tambien lado, en la UIParejas es el numero de filas y columnas tendra el tablero
 	int lado = 6;
 
 	/**
