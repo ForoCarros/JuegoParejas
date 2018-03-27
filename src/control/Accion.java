@@ -9,9 +9,10 @@ public class Accion implements Accionable{
 	int id=0;
 
 	@Override
-	public void realizarJugada(String coordenadas) {
-		int posX = Integer.valueOf(coordenadas.substring(0, 1));
-		int posY = Integer.valueOf(coordenadas.substring(1, 2));
+	public void realizarJugada(String[] coordenadas) {
+		assert coordenadas.toString().isEmpty() : "coordenada vacia";
+		int posX = Integer.parseInt(coordenadas[0]);
+		int posY = Integer.parseInt(coordenadas[1]);
 		jugable.mostrarCarta(posX, posY);
 
 		if (memoria > -1) {
@@ -28,7 +29,5 @@ public class Accion implements Accionable{
 			posXAux=posX;
 			posYAux=posY;
 		}
-		
 	}
-
 }
