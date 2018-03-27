@@ -7,34 +7,26 @@ import org.junit.jupiter.api.Test;
 
 import control.Iniciable;
 import modelo.Carta;
+import modelo.Tablero;
 
 class IniciableTest {
-	//Se necesita la clase Carta.
 	Iniciable instancia;
-	Carta tablero[][] = new Carta[2][2];
-	Carta tableroDos[][] = new Carta[2][2];
+	Tablero tablero;
+	Tablero auxiliar;
 
-	@Before
-	void crearTablero() {
-		for (int i = 0; i < tablero.length; i++) {
-			for (int j = 0; j < tablero.length; j++) {
-				this.tablero[i][j] = new Carta();
-				this.tableroDos[i][j] = new Carta();
-			}
-		}
+	@Test
+	void testCrearTablero() {
+		this.tablero = new Tablero(3);
+		assertNotEquals(this.instancia, null);
 	}
 
 	@Test
 	void testDesordenarTablero() {
-		this.instancia = new;
-		this.instancia.desordenarTablero(this.tablero);
-		assertNotEquals(tablero, tableroDos);
-	}
-
-	@Test
-	void testCrearTablero() {
-		this.instancia = new;
-		assertNotEquals(this.tablero, null);
+		this.instancia = new Tablero(3);
+		this.tablero = (Tablero) this.instancia;
+		this.auxiliar = this.instancia.desordenarTablero();
+		this.tablero.desordenarTablero(this.tablero);
+		assertNotEquals(this.instancia, this.auxiliar);
 	}
 
 }
