@@ -28,5 +28,4 @@ class IniciableTest {
 		this.tablero.desordenarTablero(this.tablero);
 		assertNotEquals(this.instancia, this.auxiliar);
 	}
-
 }
