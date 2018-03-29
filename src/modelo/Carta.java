@@ -3,7 +3,7 @@ package modelo;
 public class Carta {
 
 	private int id;
-	private boolean velada = false;
+	private boolean velada = true;
 	private boolean emparejada = false;
 
 	public Carta(int id) {

@@ -6,15 +6,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class MyActionListener implements ActionListener {
-
+	Juego juego;
 	Accion accion;
 	ParaUI paraUI;
 
 	// Que traigo el paraui aqui para ver en el tablero las ids de las cartas????
 
-	public MyActionListener(ParaUI paraUI) {
+	public MyActionListener(ParaUI paraUI, Juego juego) {
 		super();
-		this.accion = new Accion();
+		this.juego = juego;
+		this.accion = new Accion(this.juego);
 		this.paraUI = paraUI;
 	}
 
@@ -24,7 +25,6 @@ public class MyActionListener implements ActionListener {
 		JButton boton = (JButton) e.getSource();
 		String[] coordenadas = boton.getName().split("-");
 		accion.realizarJugada(coordenadas);
-		System.out.println(coordenadas[0] + " " + coordenadas[1]);
 		this.paraUI.actualizarVentana();
 	}
 }

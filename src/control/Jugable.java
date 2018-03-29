@@ -28,9 +28,4 @@ public interface Jugable {
 	 * @return true si son iguales.
 	 */
 	public boolean compararCartas(int id1, int id2);
-	
-	/**
-	 * "Borra" la memoria cambiando su valor a -1.
-	 */
-	public void borrarMemoria();
 }
