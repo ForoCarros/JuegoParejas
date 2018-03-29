@@ -14,16 +14,12 @@ public class Botonera extends JPanel {
 	int anchoPanel = 150, altoPanel = 150;
 	int ladoBoton = 50;
 
-	// esta es la variable para cambiar el lado
-	int lado = 6;
-
 	/**
 	 * Create the panel.
 	 */
 	public Botonera(int x, int y) {
 		setLayout(null);
 		this.setBounds(x, y, this.anchoPanel, this.altoPanel);
-		iniciarBotonera(lado);
 	}
 
 	/**
@@ -33,7 +29,7 @@ public class Botonera extends JPanel {
 	 *            de la botonera
 	 */
 
-	private void iniciarBotonera(int lado) {
+	public void iniciarBotonera(int lado) {
 		// Tamaño botonera
 		this.botones = new JButton[lado][lado];
 
@@ -52,6 +48,5 @@ public class Botonera extends JPanel {
 			x = 0;
 			y += this.ladoBoton;
 		}
-
 	}
 }
