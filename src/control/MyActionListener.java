@@ -10,8 +10,6 @@ public class MyActionListener implements ActionListener {
 	Accion accion;
 	ParaUI paraUI;
 
-	// Que traigo el paraui aqui para ver en el tablero las ids de las cartas????
-
 	public MyActionListener(ParaUI paraUI, Juego juego) {
 		super();
 		this.juego = juego;
@@ -24,7 +22,12 @@ public class MyActionListener implements ActionListener {
 		assert e == null : "objeto nulo";
 		JButton boton = (JButton) e.getSource();
 		String[] coordenadas = boton.getName().split("-");
-		accion.realizarJugada(coordenadas);
+		int posX = Integer.parseInt(coordenadas[0]);
+		int posY = Integer.parseInt(coordenadas[1]);
+		int idAux=paraUI.tablero.getCartas()[posX][posY].getId();
+		if (paraUI.tablero.getCartas()[posX][posY].isVelada()) {
+			accion.realizarJugada(posX,posY, idAux);
+		}
 		this.paraUI.actualizarVentana();
 	}
 }

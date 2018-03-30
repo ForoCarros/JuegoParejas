@@ -9,7 +9,7 @@ public interface Accionable {
 	 * @param y
 	 *            coordenada y.
 	 */
-	public void realizarJugada(String[] coordenadas);
+	public void realizarJugada(int posX, int posY, int id);
 
 	public void borrarMemoria();
 

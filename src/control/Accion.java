@@ -4,9 +4,7 @@ public class Accion implements Accionable {
 
 	Juego juego;
 	int posXAux, posYAux;
-	int memoria = 0;
-	// como traigo la id de cada carta????
-	int id = 0;
+	int memoria = -1;
 	
 	public Accion(Juego juego) {
 		super();
@@ -14,17 +12,12 @@ public class Accion implements Accionable {
 	}
 
 	@Override
-	public void realizarJugada(String[] coordenadas) {
-		assert coordenadas.toString().isEmpty() : "coordenada vacia";
-		int posX = Integer.parseInt(coordenadas[0]);
-		int posY = Integer.parseInt(coordenadas[1]);
+	public void realizarJugada(int posX, int posY, int id) {
+		assert String.valueOf(id).isEmpty() : "coordenada vacia";
 		this.juego.mostrarCarta(posX, posY);
 
 		if (memoria > -1) {
-			// Aqui comparamos las dos ids, pero como la traigo¿?¿?¿?
-			if (this.juego.compararCartas(id, id)) {
-				// encontrada=true; y entonces solo es poner las dos cartas desveladas y fuera
-			} else {
+			if (!(this.juego.compararCartas(memoria, id))) {
 				this.juego.ocultarCarta(posX, posY);
 				this.juego.ocultarCarta(posXAux, posYAux);
 				this.borrarMemoria();
