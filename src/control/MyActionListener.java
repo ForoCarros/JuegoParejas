@@ -22,12 +22,10 @@ public class MyActionListener implements ActionListener {
 		assert e == null : "objeto nulo";
 		JButton boton = (JButton) e.getSource();
 		String[] coordenadas = boton.getName().split("-");
-		int posX = Integer.parseInt(coordenadas[0]);
-		int posY = Integer.parseInt(coordenadas[1]);
-		int idAux=paraUI.tablero.getCartas()[posX][posY].getId();
-		if (paraUI.tablero.getCartas()[posX][posY].isVelada()) {
-			accion.realizarJugada(posX,posY, idAux);
-		}
+		accion.realizarJugada(coordenadas);
 		this.paraUI.actualizarVentana();
+		if (this.juego.jugada != 1 && this.juego.jugada % 2 == 0) {
+			this.accion.ocultarCartas();
+		}
 	}
 }

@@ -29,13 +29,32 @@ public class ParaUI extends UIParejas implements ParaUIable {
 
 	@Override
 	public void actualizarVentana() {
+		this.debug();
 		for (int i = 0; i < this.botonera.botones.length; i++) {
 			for (int j = 0; j < this.botonera.botones[i].length; j++) {
-				// this.botonera.botones[i][j].setText(String.valueOf(this.tablero.getCartas()[i][j].getId()));
 				if (!this.tablero.getCartas()[i][j].isVelada() || this.tablero.getCartas()[i][j].isEmparejada()) {
 					this.botonera.botones[i][j].setText(String.valueOf(this.tablero.getCartas()[i][j].getId()));
+				} else {
+					this.botonera.botones[i][j].setText("");
 				}
 			}
+		}
+	}
+
+	private void debug() {
+		for (int i = 0; i < this.tablero.getCartas().length; i++) {
+			for (int j = 0; j < this.tablero.getCartas()[i].length; j++) {
+				System.out.print(
+						this.tablero.getCartas()[i][j].getId() < 10 ? this.tablero.getCartas()[i][j].getId() + " "
+								: this.tablero.getCartas()[i][j].getId());
+			}
+			System.out.println();
+		}
+		for (int i = 0; i < this.tablero.getCartas().length; i++) {
+			for (int j = 0; j < this.tablero.getCartas()[i].length; j++) {
+				System.out.print(this.tablero.getCartas()[i][j].isEmparejada() ? "E" : "·");
+			}
+			System.out.println();
 		}
 	}
 }
