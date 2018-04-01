@@ -17,8 +17,28 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 
 public class UIParejas extends JFrame {
+
+public class UIParejas extends JFrame {
 	protected JPanel contentPane;
 	protected Botonera botonera;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					UIParejas frame = new UIParejas();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	// Hola cambiooogdsaddasgsad
 	/**
 	 * Create the frame.
 	 */
@@ -34,10 +54,14 @@ public class UIParejas extends JFrame {
 		lblJuegoParejas.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblJuegoParejas.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblJuegoParejas, BorderLayout.NORTH);
-		
-		botonera = new Botonera(100, 0);	
+
+		botonera = new Botonera(100, 0);
 		contentPane.add(botonera, BorderLayout.CENTER);
 		botonera.setBounds(100, 50, 150, 150);
+		botonera.setLayout(new GridLayout(botonera.lado, botonera.lado, 0, 0));
+
+	}
+
 		botonera.setLayout(new GridLayout(6, 0, 0, 0));
 
 	}

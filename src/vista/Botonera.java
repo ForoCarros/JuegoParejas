@@ -30,7 +30,7 @@ public class Botonera extends JPanel {
 	 */
 
 	public void iniciarBotonera(int lado) {
-		// Tamaño botonera
+		// TamaÃ±o botonera
 		this.botones = new JButton[lado][lado];
 
 		int x = 0, y = 0;
