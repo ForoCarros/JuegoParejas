@@ -8,9 +8,10 @@ public interface Accionable {
 	 *            coordenada x.
 	 * @param y
 	 *            coordenada y.
+	 * @throws InterruptedException
 	 */
 	public void realizarJugada(String[] coordenadas);
 
-	public void borrarMemoria();
+	public void borrarMemorias();
 
 }
