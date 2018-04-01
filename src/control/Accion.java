@@ -15,8 +15,8 @@ public class Accion implements Accionable {
 	 */
 
 	Juego juego;
-	int posXAux, posYAux;
-	int memoria = 0;
+	int memX = -1, memY = -1;
+	int memoria = -1;
 	int id = 0;
 
 	public Accion(Juego juego) {
@@ -27,28 +27,42 @@ public class Accion implements Accionable {
 	@Override
 	public void realizarJugada(String[] coordenadas) {
 		assert coordenadas.toString().isEmpty() : "coordenada vacia";
+		this.juego.incrementarJugada();
 		int posX = Integer.parseInt(coordenadas[0]);
 		int posY = Integer.parseInt(coordenadas[1]);
 		this.juego.mostrarCarta(posX, posY);
 
-		if (memoria > -1) {
-			// Aqui comparamos las dos ids, pero como la traigo¿?¿?¿?
-			if (this.juego.compararCartas(id, id)) {
-				// encontrada=true; y entonces solo es poner las dos cartas desveladas y fuera
+		if (!this.juego.tablero.getCartas()[posX][posY].isEmparejada()) {
+			if (this.memoria == -1) {
+				System.out.println("Memoria -1");
+				this.memX = posX;
+				this.memY = posY;
+				this.memoria = this.juego.tablero.getCartas()[posX][posY].getId();
 			} else {
-				this.juego.ocultarCarta(posX, posY);
-				this.juego.ocultarCarta(posXAux, posYAux);
-				this.borrarMemoria();
+				System.out.println("Memoria:" + this.memoria);
+				System.out.println(this.memoria + " " + this.memX + " " + this.memY + " " + posX + " " + posY);
+				if (this.juego.compararCartas(this.memoria, this.juego.tablero.getCartas()[posX][posY].getId())
+						&& !(this.memX == posX && this.memY == posY)) {
+					System.out.println("Comparadas");
+					this.juego.emparejarCartas(posX, posY, this.memX, this.memY);
+				}
+				borrarMemorias();
 			}
-		} else {
-			this.memoria = id;
-			this.posXAux = posX;
-			this.posYAux = posY;
+		}
+	}
+
+	protected void ocultarCartas() {
+		for (int i = 0; i < this.juego.tablero.getCartas().length; i++) {
+			for (int j = 0; j < this.juego.tablero.getCartas()[i].length; j++) {
+				this.juego.ocultarCarta(i, j);
+			}
 		}
 	}
 
 	@Override
-	public void borrarMemoria() {
+	public void borrarMemorias() {
 		this.memoria = -1;
+		this.memX = -1;
+		this.memY = -1;
 	}
 }
