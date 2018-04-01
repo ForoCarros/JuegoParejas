@@ -28,4 +28,16 @@ public interface Jugable {
 	 * @return true si son iguales.
 	 */
 	public boolean compararCartas(int id1, int id2);
+	
+	/**
+	 * Cambia el emparejadas a true.
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @return
+	 */
+	public void emparejarCartas(int x1, int y1, int x2, int y2);
+	
+	public void incrementarJugada();
 }
