@@ -26,5 +26,8 @@ public class MyActionListener implements ActionListener {
 		String[] coordenadas = boton.getName().split("-");
 		accion.realizarJugada(coordenadas);
 		this.paraUI.actualizarVentana();
+		if (this.juego.jugada != 1 && this.juego.jugada % 2 == 0) {
+			this.accion.ocultarCartas();
+		}
 	}
 }
