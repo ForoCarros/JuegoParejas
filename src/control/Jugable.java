@@ -30,7 +30,14 @@ public interface Jugable {
 	public boolean compararCartas(int id1, int id2);
 	
 	/**
-	 * "Borra" la memoria cambiando su valor a -1.
+	 * Cambia el emparejadas a true.
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @return
 	 */
-	public void borrarMemoria();
+	public void emparejarCartas(int x1, int y1, int x2, int y2);
+	
+	public void incrementarJugada();
 }

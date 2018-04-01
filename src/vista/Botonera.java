@@ -14,17 +14,12 @@ public class Botonera extends JPanel {
 	int anchoPanel = 150, altoPanel = 150;
 	int ladoBoton = 50;
 
-	// esta es la variable para cambiar el lado
-	//tambien lado, en la UIParejas es el numero de filas y columnas tendra el tablero
-	int lado = 6;
-
 	/**
 	 * Create the panel.
 	 */
 	public Botonera(int x, int y) {
 		setLayout(null);
 		this.setBounds(x, y, this.anchoPanel, this.altoPanel);
-		iniciarBotonera(lado);
 	}
 
 	/**
@@ -34,8 +29,8 @@ public class Botonera extends JPanel {
 	 *            de la botonera
 	 */
 
-	private void iniciarBotonera(int lado) {
-		// Tamaño botonera
+	public void iniciarBotonera(int lado) {
+		// TamaÃ±o botonera
 		this.botones = new JButton[lado][lado];
 
 		int x = 0, y = 0;
@@ -49,11 +44,9 @@ public class Botonera extends JPanel {
 
 				this.add(this.botones[i][j]);
 				x += this.ladoBoton;
-
 			}
 			x = 0;
 			y += this.ladoBoton;
 		}
-
 	}
 }

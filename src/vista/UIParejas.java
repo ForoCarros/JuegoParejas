@@ -18,10 +18,7 @@ import javax.swing.ImageIcon;
 
 public class UIParejas extends JFrame {
 
-	protected int b;
-	int asdfg;
-	protected int cosita;
-
+public class UIParejas extends JFrame {
 	protected JPanel contentPane;
 	protected Botonera botonera;
 
@@ -65,4 +62,7 @@ public class UIParejas extends JFrame {
 
 	}
 
+		botonera.setLayout(new GridLayout(6, 0, 0, 0));
+
+	}
 }
