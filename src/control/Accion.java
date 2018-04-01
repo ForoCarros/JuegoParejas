@@ -26,7 +26,7 @@ public class Accion implements Accionable {
 
 	@Override
 	public void realizarJugada(String[] coordenadas) {
-		assert coordenadas.toString().isEmpty() : "coordenada vacia";
+		assert !coordenadas.toString().isEmpty() : "coordenada vacia";
 		this.juego.incrementarJugada();
 		int posX = Integer.parseInt(coordenadas[0]);
 		int posY = Integer.parseInt(coordenadas[1]);
