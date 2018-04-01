@@ -1,8 +1,6 @@
 package vista;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,18 +8,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.FlowLayout;
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
 
 public class UIParejas extends JFrame {
 	protected JPanel contentPane;
 	protected Botonera botonera;
-	/**
-	 * Create the frame.
-	 */
+
 	public UIParejas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -34,11 +25,8 @@ public class UIParejas extends JFrame {
 		lblJuegoParejas.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblJuegoParejas.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblJuegoParejas, BorderLayout.NORTH);
-		
-		botonera = new Botonera(100, 0);	
-		contentPane.add(botonera, BorderLayout.CENTER);
-		botonera.setBounds(100, 50, 150, 150);
-		botonera.setLayout(new GridLayout(6, 0, 0, 0));
 
+		botonera = new Botonera();
+		contentPane.add(botonera, BorderLayout.CENTER);
 	}
 }

@@ -17,14 +17,13 @@ public class Tablero implements Iniciable {
 	public void desordenarTablero(Carta[][] tablero) {
 		assert tablero != null : "El tablero no existe";
 		Random random = new Random();
-		for (int i = 0; i < (tablero.length)*2; i++) {
-			int[] cambioUno=random.generarCoordenadasAleatorias(0, tablero.length-1);
-			int[] cambioDos=random.generarCoordenadasAleatorias(0, tablero.length-1);
-			int auxiliar=tablero[cambioDos[0]][cambioDos[1]].getId();
+		for (int i = 0; i < (tablero.length) * 2; i++) {
+			int[] cambioUno = random.generarCoordenadasAleatorias(0, tablero.length - 1);
+			int[] cambioDos = random.generarCoordenadasAleatorias(0, tablero.length - 1);
+			int auxiliar = tablero[cambioDos[0]][cambioDos[1]].getId();
 			tablero[cambioDos[0]][cambioDos[1]].setId(tablero[cambioUno[0]][cambioUno[1]].getId());
 			tablero[cambioUno[0]][cambioUno[1]].setId(auxiliar);
 		}
-
 	}
 
 	@Override
@@ -40,9 +39,7 @@ public class Tablero implements Iniciable {
 				getCartas()[i][j] = new Carta(idCarta);
 				idCarta++;
 			}
-
 		}
-
 	}
 
 	public Carta[][] getCartas() {
@@ -52,5 +49,4 @@ public class Tablero implements Iniciable {
 	public void setCartas(Carta[][] cartas) {
 		this.cartas = cartas;
 	}
-	
 }

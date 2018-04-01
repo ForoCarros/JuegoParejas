@@ -19,7 +19,7 @@ public class MyActionListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		assert e == null : "objeto nulo";
+		assert e != null : "objeto nulo";
 		JButton boton = (JButton) e.getSource();
 		String[] coordenadas = boton.getName().split("-");
 		accion.realizarJugada(coordenadas);
