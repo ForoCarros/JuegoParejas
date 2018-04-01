@@ -8,7 +8,7 @@ public class ParaUI extends UIParejas implements ParaUIable {
 	Tablero tablero;
 	MyActionListener listener;
 	Juego juego;
-	final int LADO = 6;
+	final int LADO = 20;
 	final int ARCHIVOS = 20;
 	final String EXTENSION = ".jpg";
 	StretchIcon iconos[];
