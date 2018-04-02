@@ -2,31 +2,27 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 
-import control.Iniciable;
-import modelo.Carta;
 import modelo.Tablero;
 
 class IniciableTest {
-	Iniciable instancia;
-	Tablero tablero;
-	Tablero auxiliar;
-
+	
 	@Test
 	void testCrearTablero() {
-		this.tablero = new Tablero(3);
-		assertNotEquals(this.instancia, null);
+		Tablero tablero = new Tablero(4);
+		assertNotNull(tablero);
 	}
 
+	//Funciona, pero el assert no me da el resultado correcto.
 	@Test
 	void testDesordenarTablero() {
-		this.instancia = new Tablero(3);
-		this.tablero = (Tablero) this.instancia;
-		//this.auxiliar = this.instancia.desordenarTablero();
-		//this.tablero.desordenarTablero(this.tablero);
-		assertNotEquals(this.instancia, this.auxiliar);
+		Tablero tablero = new Tablero(4);
+		Tablero tableroDos = tablero;
+		System.out.println(tablero.getCartas()[0][0].getId());
+		tableroDos.desordenarTablero();
+		System.out.println(tableroDos.getCartas()[0][0].getId());
+		assertNotEquals(tablero.getCartas()[0][0].getId(), tableroDos.getCartas()[0][0].getId());
 	}
 }
