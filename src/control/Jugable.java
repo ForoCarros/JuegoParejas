@@ -39,5 +39,14 @@ public interface Jugable {
 	 */
 	public void emparejarCartas(int x1, int y1, int x2, int y2);
 	
+	/**
+	 * Incrementa el número de jugada.
+	 */
 	public void incrementarJugada();
+	
+	/**
+	 * Comprueba si hay ganador
+	 * @return true si todas las cartas están emparejadas, false si no.
+	 */
+	public boolean comprobarGanador();
 }
