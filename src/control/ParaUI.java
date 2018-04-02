@@ -28,7 +28,7 @@ public class ParaUI extends UIParejas implements ParaUIable {
 	private void generarImagenes() {
 		this.iconos = new StretchIcon[this.ARCHIVOS];
 		for (int i = 0; i < this.ARCHIVOS; i++) {
-			this.iconos[i] = new StretchIcon("/assets/" + i + this.EXTENSION);
+			this.iconos[i] = new StretchIcon("src/assets/" + i + this.EXTENSION);
 		}
 	}
 

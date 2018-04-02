@@ -6,7 +6,7 @@ public interface Iniciable {
 	/**
 	 * Desordena el tablero.
 	 */
-	public void desordenarTablero(Carta[][] tablero);
+	public void desordenarTablero();
 	
 	/**
 	 * Crea el tablero según el número de parejas.
