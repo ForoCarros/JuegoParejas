@@ -10,19 +10,19 @@ public class Tablero implements Iniciable {
 	public Tablero(int dimensiones) {
 		super();
 		crearTablero(dimensiones);
-		desordenarTablero(getCartas());
+		desordenarTablero();
 	}
 
 	@Override
-	public void desordenarTablero(Carta[][] tablero) {
-		assert tablero != null : "El tablero no existe";
+	public void desordenarTablero() {
+		assert this.cartas != null : "El tablero no existe";
 		Random random = new Random();
-		for (int i = 0; i < (tablero.length) * 2; i++) {
-			int[] cambioUno = random.generarCoordenadasAleatorias(0, tablero.length - 1);
-			int[] cambioDos = random.generarCoordenadasAleatorias(0, tablero.length - 1);
-			int auxiliar = tablero[cambioDos[0]][cambioDos[1]].getId();
-			tablero[cambioDos[0]][cambioDos[1]].setId(tablero[cambioUno[0]][cambioUno[1]].getId());
-			tablero[cambioUno[0]][cambioUno[1]].setId(auxiliar);
+		for (int i = 0; i < (this.cartas.length) * 2; i++) {
+			int[] cambioUno = random.generarCoordenadasAleatorias(0, this.cartas.length - 1);
+			int[] cambioDos = random.generarCoordenadasAleatorias(0, this.cartas.length - 1);
+			int auxiliar = this.cartas[cambioDos[0]][cambioDos[1]].getId();
+			this.cartas[cambioDos[0]][cambioDos[1]].setId(this.cartas[cambioUno[0]][cambioUno[1]].getId());
+			this.cartas[cambioUno[0]][cambioUno[1]].setId(auxiliar);
 		}
 	}
 
