@@ -45,5 +45,21 @@ class JugableTest {
 		assertTrue(juego.compararCartas(cartaUno.getId(), cartaDos.getId()));
 		assertFalse(juego.compararCartas(cartaDos.getId(), cartaTres.getId()));
 	}
+	
+	@Test
+	void testEmparejarCartas() {
+		this.juego.emparejarCartas(0, 0, 1, 1);
+		assertTrue(this.tablero.getCartas()[0][0].isEmparejada());
+	}
+	
+	@Test
+	void comprobarGanador() {
+		for (int i = 0; i < this.tablero.getCartas().length; i++) {
+			for (int j = 0; j < this.tablero.getCartas()[i].length; j++) {
+				this.juego.emparejarCartas(i, j, i, j);
+			}
+		}
+		assertEquals(this.juego.comprobarGanador(), true);
+	}
 
 }
