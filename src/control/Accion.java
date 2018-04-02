@@ -39,11 +39,8 @@ public class Accion implements Accionable {
 				this.memY = posY;
 				this.memoria = this.juego.tablero.getCartas()[posX][posY].getId();
 			} else {
-				System.out.println("Memoria:" + this.memoria);
-				System.out.println(this.memoria + " " + this.memX + " " + this.memY + " " + posX + " " + posY);
 				if (this.juego.compararCartas(this.memoria, this.juego.tablero.getCartas()[posX][posY].getId())
 						&& !(this.memX == posX && this.memY == posY)) {
-					System.out.println("Comparadas");
 					this.juego.emparejarCartas(posX, posY, this.memX, this.memY);
 				}
 				borrarMemorias();
