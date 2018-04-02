@@ -34,7 +34,6 @@ public class Accion implements Accionable {
 
 		if (!this.juego.tablero.getCartas()[posX][posY].isEmparejada()) {
 			if (this.memoria == -1) {
-				System.out.println("Memoria -1");
 				this.memX = posX;
 				this.memY = posY;
 				this.memoria = this.juego.tablero.getCartas()[posX][posY].getId();

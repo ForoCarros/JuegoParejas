@@ -8,10 +8,10 @@ public class ParaUI extends UIParejas implements ParaUIable {
 	Tablero tablero;
 	MyActionListener listener;
 	Juego juego;
-	final int PAREJAS = 4;
-	final int ARCHIVOS = 20;
+	final int PAREJAS = 18;
+	final int ARCHIVOS = 21;
 	final String EXTENSION = ".jpg";
-	int lado = this.PAREJAS;
+	int lado = (int) (Math.sqrt(2 * this.PAREJAS));
 	StretchIcon iconos[];
 
 	public ParaUI() {
@@ -27,7 +27,8 @@ public class ParaUI extends UIParejas implements ParaUIable {
 
 	private void generarImagenes() {
 		this.iconos = new StretchIcon[this.ARCHIVOS];
-		for (int i = 0; i < this.ARCHIVOS; i++) {
+		this.iconos[0] = new StretchIcon("src/assets/back.png");
+		for (int i = 1; i < this.ARCHIVOS; i++) {
 			this.iconos[i] = new StretchIcon("src/assets/" + i + this.EXTENSION);
 		}
 	}
@@ -45,9 +46,9 @@ public class ParaUI extends UIParejas implements ParaUIable {
 		for (int i = 0; i < this.botonera.botones.length; i++) {
 			for (int j = 0; j < this.botonera.botones[i].length; j++) {
 				if (!this.tablero.getCartas()[i][j].isVelada() || this.tablero.getCartas()[i][j].isEmparejada()) {
-					this.botonera.botones[i][j].setIcon(this.iconos[this.tablero.getCartas()[i][j].getId()]);
+					this.botonera.botones[i][j].setIcon(this.iconos[this.tablero.getCartas()[i][j].getId() + 1]);
 				} else {
-					this.botonera.botones[i][j].setIcon(null);
+					this.botonera.botones[i][j].setIcon(this.iconos[0]);
 				}
 			}
 		}
