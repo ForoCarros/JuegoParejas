@@ -39,4 +39,16 @@ public class Juego implements Jugable {
 	public void incrementarJugada() {
 		this.jugada++;
 	}
+
+	@Override
+	public boolean comprobarGanador() {
+		for (int i = 0; i < this.tablero.getCartas().length; i++) {
+			for (int j = 0; j < this.tablero.getCartas()[i].length; j++) {
+				if(!this.tablero.getCartas()[i][j].isEmparejada()) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 }
