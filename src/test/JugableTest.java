@@ -1,52 +1,49 @@
 package test;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 
+import control.Juego;
 import control.Jugable;
 import modelo.Carta;
+import modelo.Tablero;
 
 class JugableTest {
-	//Se necesita la clase carta.
-	Jugable instancia;
-	Carta tablero[][] = new Carta[2][2];
 
-	@Before
-	void crearTablero() {
-		for (int i = 0; i < tablero.length; i++) {
-			for (int j = 0; j < tablero.length; j++) {
-				//this.tablero[i][j] = new Carta();
-			}
-		}
-	}
+	Tablero tablero=new Tablero(2);
+	Juego juego = new Juego(tablero);
 
 	@Test
 	void testMostrarCarta() {
-		//this.instancia = new;
-		this.instancia.ocultarCarta(1, 1);
-		//assertEquals(this.tablero[1][1].oculta, false);
+		this.tablero.crearTablero(2);
+		this.juego.mostrarCarta(0, 0);
+		assertFalse(this.tablero.getCartas()[0][0].isVelada());
 	}
 
-	@Test
+	@Ignore
 	void testOcultarCarta() {
-		//this.instancia = new;
-		this.instancia.ocultarCarta(1, 1);
-		//assertEquals(this.tablero[1][1].oculta, true);
+		this.tablero.crearTablero(2);
+		this.juego.ocultarCarta(1, 1);
+		assertTrue(this.tablero.getCartas()[1][1].isVelada());
+		
 	}
 
-	@Test
+	@Ignore
 	void testCompararCartas() {
-		//this.instancia = new;
-		//assertTrue(this.instancia.compararCartas(this.tablero[0][0], this.tablero[1][0]));
-	}
-
-	@Test
-	void testBorrarMemoria() {
-		//this.instancia = new;
-		//this.instancia.borrarMemoria();
-		//assertEquals(this.instancia.memoria, -1);
+		Juego juego = new Juego(null);
+		Carta cartaUno = new Carta(1);
+		cartaUno.setVelada(true);
+		Carta cartaDos = new Carta(1);
+		cartaDos.setVelada(true);
+		Carta cartaTres = new Carta(2);
+		cartaTres.setVelada(true);
+		
+		assertTrue(juego.compararCartas(cartaUno.getId(), cartaDos.getId()));
+		assertFalse(juego.compararCartas(cartaDos.getId(), cartaTres.getId()));
 	}
 
 }
