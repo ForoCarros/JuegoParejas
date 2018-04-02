@@ -10,8 +10,6 @@ public class MyActionListener implements ActionListener {
 	Accion accion;
 	ParaUI paraUI;
 
-	// Que traigo el paraui aqui para ver en el tablero las ids de las cartas????
-
 	public MyActionListener(ParaUI paraUI, Juego juego) {
 		super();
 		this.juego = juego;
