@@ -12,6 +12,9 @@ public interface Accionable {
 	 */
 	public void realizarJugada(String[] coordenadas);
 
+	/**
+	 * Establece el valor de las variables de memoria a -1.
+	 */
 	public void borrarMemorias();
 
 }
