@@ -1,19 +1,6 @@
 package control;
 
 public class Accion implements Accionable {
-
-	/*
-	 * ACLARACIONES DE LOS CAMBIOS: Juego juego es la clase que almacena el tablero
-	 * y los métodos necesarios para jugar. He cambiado todo lo que tenías de
-	 * Jugable (por ejemplo jugable.mostrarCarta() y esas cosas). Ahora es
-	 * this.juego.loQueSea(). BorrarMemoria lo he cambiado a aquí porque aquí es
-	 * donde se utiliza.
-	 * 
-	 * COSAS QUE A PRIORI CREO QUE NO SON NECESARIAS: las posiciones auxiliares,
-	 * puesto que en el ParaUI se muestran o no las cartas en función de los valores
-	 * de las propiedades.
-	 */
-
 	Juego juego;
 	int memX = -1, memY = -1;
 	int memoria = -1;
@@ -24,6 +11,9 @@ public class Accion implements Accionable {
 		this.juego = juego;
 	}
 
+	/**
+	 * Gestiona la jugada.
+	 */
 	@Override
 	public void realizarJugada(String[] coordenadas) {
 		assert !coordenadas.toString().isEmpty() : "coordenada vacia";
@@ -47,7 +37,10 @@ public class Accion implements Accionable {
 		}
 	}
 
-	protected void ocultarCartas() {
+	/**
+	 * Oculta las cartas de todo el tablero.
+	 */
+	private void ocultarCartas() {
 		for (int i = 0; i < this.juego.tablero.getCartas().length; i++) {
 			for (int j = 0; j < this.juego.tablero.getCartas()[i].length; j++) {
 				this.juego.ocultarCarta(i, j);
@@ -55,6 +48,9 @@ public class Accion implements Accionable {
 		}
 	}
 
+	/**
+	 * Establece los valores de las variables de memoria a -1.
+	 */
 	@Override
 	public void borrarMemorias() {
 		this.memoria = -1;
