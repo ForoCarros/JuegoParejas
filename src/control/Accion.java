@@ -37,7 +37,7 @@ public class Accion implements Accionable {
 	/**
 	 * Oculta las cartas de todo el tablero.
 	 */
-	private void ocultarCartas() {
+	public void ocultarCartas() {
 		for (int i = 0; i < this.juego.tablero.getCartas().length; i++) {
 			for (int j = 0; j < this.juego.tablero.getCartas()[i].length; j++) {
 				this.juego.ocultarCarta(i, j);
