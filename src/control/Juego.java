@@ -17,6 +17,7 @@ public class Juego implements Jugable {
 
 	}
 
+
 	@Override
 	public void ocultarCarta(int x, int y) {
 		this.tablero.getCartas()[x][y].setVelada(true);

@@ -11,9 +11,6 @@ public class Accion implements Accionable {
 		this.juego = juego;
 	}
 
-	/**
-	 * Gestiona la jugada.
-	 */
 	@Override
 	public void realizarJugada(String[] coordenadas) {
 		assert !coordenadas.toString().isEmpty() : "coordenada vacia";
@@ -48,9 +45,6 @@ public class Accion implements Accionable {
 		}
 	}
 
-	/**
-	 * Establece los valores de las variables de memoria a -1.
-	 */
 	@Override
 	public void borrarMemorias() {
 		this.memoria = -1;
